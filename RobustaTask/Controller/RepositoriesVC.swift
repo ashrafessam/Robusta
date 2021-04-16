@@ -48,6 +48,7 @@ extension RepositoriesVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeue() as RepositoriesCell
         let item = reposArray?[indexPath.row]
+        cell.repoAvatar.loadImageUsingUrlString(urlString: item?.owner.avatarURL ?? "")
         cell.configureText(repoName: "Repo Name: \(item?.name ?? "")", ownerName: "Owner Name: \(item?.owner.login ?? "")")
         return cell
     }
@@ -55,9 +56,3 @@ extension RepositoriesVC: UITableViewDataSource {
         view.endEditing(true)
     }
 }
-
-//extension RepositoriesVC: UITableViewDelegate {
-////    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-////        return 80
-////        }
-//}

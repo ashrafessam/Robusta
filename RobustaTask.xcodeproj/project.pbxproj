@@ -19,6 +19,7 @@
 		DC870572262A1E61007AF4B5 /* UITableViewExtenion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC870571262A1E61007AF4B5 /* UITableViewExtenion.swift */; };
 		DC870576262A1EA8007AF4B5 /* RepositoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC870574262A1EA8007AF4B5 /* RepositoriesCell.swift */; };
 		DC870577262A1EA8007AF4B5 /* RepositoriesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC870575262A1EA8007AF4B5 /* RepositoriesCell.xib */; };
+		DC87057A262A2191007AF4B5 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC870579262A2191007AF4B5 /* CustomImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		DC870571262A1E61007AF4B5 /* UITableViewExtenion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtenion.swift; sourceTree = "<group>"; };
 		DC870574262A1EA8007AF4B5 /* RepositoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesCell.swift; sourceTree = "<group>"; };
 		DC870575262A1EA8007AF4B5 /* RepositoriesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoriesCell.xib; sourceTree = "<group>"; };
+		DC870579262A2191007AF4B5 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				DC870560262A1825007AF4B5 /* Network */,
 				DC870561262A1861007AF4B5 /* Constants.swift */,
 				DC870571262A1E61007AF4B5 /* UITableViewExtenion.swift */,
+				DC870579262A2191007AF4B5 /* CustomImageView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC870567262A194C007AF4B5 /* RepositoriesVC.swift in Sources */,
+				DC87057A262A2191007AF4B5 /* CustomImageView.swift in Sources */,
 				DC870576262A1EA8007AF4B5 /* RepositoriesCell.swift in Sources */,
 				DC87055A262A17D1007AF4B5 /* APIManager.swift in Sources */,
 				DC87055D262A180E007AF4B5 /* ReposModel.swift in Sources */,

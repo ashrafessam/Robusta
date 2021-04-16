@@ -8,7 +8,7 @@
 import UIKit
 
 class RepositoriesCell: UITableViewCell {
-    @IBOutlet weak var repoAvatar: UIImageView!
+    @IBOutlet weak var repoAvatar: CustomImageView!
     @IBOutlet weak var ownerName: UILabel!
     @IBOutlet weak var repoName: UILabel!
     
