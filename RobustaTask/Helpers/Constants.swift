@@ -9,4 +9,5 @@ import UIKit
 
 struct Constants {
     static let githubReposUrl = "https://api.github.com/repositories"
+    static let Repositories = "Repositories"
 }

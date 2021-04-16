@@ -18,25 +18,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZDl-4A-w2P">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="144" width="414" height="718"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="9Kh-De-tOY" id="neF-Hi-5eI"/>
                                     <outlet property="delegate" destination="9Kh-De-tOY" id="ibL-Po-qFm"/>
                                 </connections>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="OXH-Wn-Ogo">
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="9Kh-De-tOY" id="qgb-Qe-ahf"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eO2-Hm-gbU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="OXH-Wn-Ogo" firstAttribute="top" secondItem="eO2-Hm-gbU" secondAttribute="top" id="4tt-vc-ptw"/>
                             <constraint firstItem="eO2-Hm-gbU" firstAttribute="trailing" secondItem="ZDl-4A-w2P" secondAttribute="trailing" id="AV9-rf-qyn"/>
                             <constraint firstItem="ZDl-4A-w2P" firstAttribute="leading" secondItem="eO2-Hm-gbU" secondAttribute="leading" id="GR2-7h-0UO"/>
-                            <constraint firstItem="ZDl-4A-w2P" firstAttribute="top" secondItem="eO2-Hm-gbU" secondAttribute="top" id="Gnz-kp-hHn"/>
                             <constraint firstItem="eO2-Hm-gbU" firstAttribute="bottom" secondItem="ZDl-4A-w2P" secondAttribute="bottom" id="Hfe-NB-TsE"/>
+                            <constraint firstItem="OXH-Wn-Ogo" firstAttribute="trailing" secondItem="eO2-Hm-gbU" secondAttribute="trailing" id="fFh-bf-yUp"/>
+                            <constraint firstItem="ZDl-4A-w2P" firstAttribute="top" secondItem="OXH-Wn-Ogo" secondAttribute="bottom" id="gE6-4y-ct9"/>
+                            <constraint firstItem="OXH-Wn-Ogo" firstAttribute="leading" secondItem="eO2-Hm-gbU" secondAttribute="leading" id="y3A-Xn-FxI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xuK-Fo-DFi"/>
                     <connections>
+                        <outlet property="searchBar" destination="OXH-Wn-Ogo" id="zrl-pJ-FFJ"/>
                         <outlet property="tableView" destination="ZDl-4A-w2P" id="uYz-6N-zIm"/>
                     </connections>
                 </viewController>
