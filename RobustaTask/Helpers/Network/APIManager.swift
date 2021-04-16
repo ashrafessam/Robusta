@@ -30,5 +30,24 @@ class APIManager: NSObject {
             }
         }.resume()
     }
+    func fetchReposDetails(url: String, completion: @escaping (Result<RepoDetails, Error>) -> ()){
+        
+        let urlString = url
+        guard let url = URL(string: urlString) else { return }
+        
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if let err = error {
+                completion(.failure(err))
+                return
+            }
+            do {
+                let repos = try JSONDecoder().decode(RepoDetails.self, from: data!)
+                completion(.success(repos))
+            }
+            catch let jsonError {
+                completion(.failure(jsonError))
+            }
+        }.resume()
+    }
 }
 

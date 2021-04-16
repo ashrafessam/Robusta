@@ -18,7 +18,7 @@ class RepositoriesVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        NavigationTitle()
+        NavigationTitle(title: Constants.Repositories)
         RegisterNib()
         fetchRepos()
     }
@@ -77,6 +77,13 @@ extension RepositoriesVC: UITableViewDataSource {
 }
 
 extension RepositoriesVC: UITableViewDelegate{
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = filterArray?[indexPath.row]
+        let vc = ControllerProvider.viewContoller(className: RepositoryDetailsVC.self, storyboard: .MainStoryboard, presentationStyle: .none)
+        vc.repoUrl = item?.owner.url
+        vc.repoName = item?.name
+        navigationController?.pushViewController(vc, animated: true)
+    }
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         view.endEditing(true)
     }

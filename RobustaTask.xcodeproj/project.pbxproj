@@ -20,6 +20,10 @@
 		DC870576262A1EA8007AF4B5 /* RepositoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC870574262A1EA8007AF4B5 /* RepositoriesCell.swift */; };
 		DC870577262A1EA8007AF4B5 /* RepositoriesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC870575262A1EA8007AF4B5 /* RepositoriesCell.xib */; };
 		DC87057A262A2191007AF4B5 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC870579262A2191007AF4B5 /* CustomImageView.swift */; };
+		DC87057D262A2555007AF4B5 /* ControllerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC87057C262A2555007AF4B5 /* ControllerProvider.swift */; };
+		DC870580262A25D6007AF4B5 /* RepositoryDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC87057F262A25D6007AF4B5 /* RepositoryDetailsVC.swift */; };
+		DC870583262A270D007AF4B5 /* RepoDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC870582262A270D007AF4B5 /* RepoDetails.swift */; };
+		DC870586262A2755007AF4B5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC870585262A2755007AF4B5 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,10 @@
 		DC870574262A1EA8007AF4B5 /* RepositoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesCell.swift; sourceTree = "<group>"; };
 		DC870575262A1EA8007AF4B5 /* RepositoriesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoriesCell.xib; sourceTree = "<group>"; };
 		DC870579262A2191007AF4B5 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
+		DC87057C262A2555007AF4B5 /* ControllerProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerProvider.swift; sourceTree = "<group>"; };
+		DC87057F262A25D6007AF4B5 /* RepositoryDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsVC.swift; sourceTree = "<group>"; };
+		DC870582262A270D007AF4B5 /* RepoDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetails.swift; sourceTree = "<group>"; };
+		DC870585262A2755007AF4B5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +96,8 @@
 				DC870561262A1861007AF4B5 /* Constants.swift */,
 				DC870571262A1E61007AF4B5 /* UITableViewExtenion.swift */,
 				DC870579262A2191007AF4B5 /* CustomImageView.swift */,
+				DC87057C262A2555007AF4B5 /* ControllerProvider.swift */,
+				DC870585262A2755007AF4B5 /* Extensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -104,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				DC870566262A194C007AF4B5 /* RepositoriesVC.swift */,
+				DC87057F262A25D6007AF4B5 /* RepositoryDetailsVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -112,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				DC87055C262A180E007AF4B5 /* ReposModel.swift */,
+				DC870582262A270D007AF4B5 /* RepoDetails.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -215,15 +227,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC870583262A270D007AF4B5 /* RepoDetails.swift in Sources */,
+				DC87057D262A2555007AF4B5 /* ControllerProvider.swift in Sources */,
 				DC870567262A194C007AF4B5 /* RepositoriesVC.swift in Sources */,
 				DC87057A262A2191007AF4B5 /* CustomImageView.swift in Sources */,
 				DC870576262A1EA8007AF4B5 /* RepositoriesCell.swift in Sources */,
 				DC87055A262A17D1007AF4B5 /* APIManager.swift in Sources */,
 				DC87055D262A180E007AF4B5 /* ReposModel.swift in Sources */,
 				DC870522262A1452007AF4B5 /* AppDelegate.swift in Sources */,
+				DC870586262A2755007AF4B5 /* Extensions.swift in Sources */,
 				DC870572262A1E61007AF4B5 /* UITableViewExtenion.swift in Sources */,
 				DC870524262A1452007AF4B5 /* SceneDelegate.swift in Sources */,
 				DC870562262A1861007AF4B5 /* Constants.swift in Sources */,
+				DC870580262A25D6007AF4B5 /* RepositoryDetailsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
