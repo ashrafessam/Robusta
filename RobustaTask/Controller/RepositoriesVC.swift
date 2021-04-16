@@ -9,12 +9,18 @@ import UIKit
 
 class RepositoriesVC: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
     var reposArray: [ReposModel]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        RegisterNib()
         fetchRepos()
+    }
+    
+    private func RegisterNib(){
+        tableView.registerCellNib(cellClass: RepositoriesCell.self)
     }
     
     private func fetchRepos(){
@@ -23,7 +29,7 @@ class RepositoriesVC: UIViewController {
             case .success(let repos):
                 DispatchQueue.main.async {
                     self.reposArray = repos
-                    print(self.reposArray?.count ?? 0)
+                    self.tableView.reloadData()
                 }
             case .failure(let error):
                 print("Failed to fetch repos", error)
@@ -31,3 +37,27 @@ class RepositoriesVC: UIViewController {
         }
     }
 }
+
+extension RepositoriesVC: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        1
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return reposArray?.count ?? 0
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeue() as RepositoriesCell
+        let item = reposArray?[indexPath.row]
+        cell.configureText(repoName: "Repo Name: \(item?.name ?? "")", ownerName: "Owner Name: \(item?.owner.login ?? "")")
+        return cell
+    }
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        view.endEditing(true)
+    }
+}
+
+//extension RepositoriesVC: UITableViewDelegate {
+////    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+////        return 80
+////        }
+//}
